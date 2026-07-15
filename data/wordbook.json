@@ -12,7 +12,7 @@
           "english": "adversarial",
           "phonetic": {},
           "definitions": [
-            "形容词词性"
+            "adj. 敌对的；对立的"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -176,7 +176,7 @@
           "english": "avert",
           "phonetic": {},
           "definitions": [
-            "adj.转移的"
+            "v. 转移；防止，避免"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -188,7 +188,7 @@
           "english": "catalogue",
           "phonetic": {},
           "definitions": [
-            "英/'kætəlɒg/"
+            "n. 目录；一系列"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -200,7 +200,7 @@
           "english": "collaborative",
           "phonetic": {},
           "definitions": [
-            "adv.合作地"
+            "adj. 合作的；协作的"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -212,7 +212,7 @@
           "english": "controversial",
           "phonetic": {},
           "definitions": [
-            "adj. 没有争议的"
+            "adj. 有争议的；引起争议的"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -224,7 +224,7 @@
           "english": "conversation",
           "phonetic": {},
           "definitions": [
-            "adj.口语的"
+            "n. 对话；交谈；会话"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -340,7 +340,7 @@
           "english": "convert",
           "phonetic": {},
           "definitions": [
-            "adj.可转换的"
+            "vt. 使转变；转换；使改变信仰"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -461,7 +461,7 @@
           "english": "disorder",
           "phonetic": {},
           "definitions": [
-            "adj.混乱的;失调的"
+            "n. 混乱；杂乱；失调"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -473,7 +473,7 @@
           "english": "diversity",
           "phonetic": {},
           "definitions": [
-            "英/daɪ'vɜːsəti/"
+            "n. 多样性；差异"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -746,7 +746,7 @@
           "english": "log",
           "phonetic": {},
           "definitions": [
-            "n.逻辑学"
+            "n. 原木；日志；记录"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -832,7 +832,7 @@
           "english": "march",
           "phonetic": {},
           "definitions": [
-            "n.三月(March);示威游行;行军;稳步发展"
+            "n. 三月；行军；示威游行"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -844,7 +844,7 @@
           "english": "margin",
           "phonetic": {},
           "definitions": [
-            "adj.微不足道的"
+            "n. 边缘；余地；幅度"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -1071,7 +1071,7 @@
           "english": "remark",
           "phonetic": {},
           "definitions": [
-            "adj.非凡的"
+            "n. 评论；v. 评论；注意到"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -1083,7 +1083,7 @@
           "english": "reverse",
           "phonetic": {},
           "definitions": [
-            "adv.相反地"
+            "v. 颠倒；逆转；adj. 相反的；n. 反面"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -1095,7 +1095,7 @@
           "english": "subordinate",
           "phonetic": {},
           "definitions": [
-            "adj.次要地位的"
+            "adj. 从属的；次要的；n. 下属"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -1107,7 +1107,7 @@
           "english": "universe",
           "phonetic": {},
           "definitions": [
-            "（一、转） (ai)"
+            "n. 宇宙；天地万物；领域"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -1119,7 +1119,7 @@
           "english": "versatile",
           "phonetic": {},
           "definitions": [
-            "adv.多才地"
+            "adj. 多才多艺的；多功能的"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -1131,7 +1131,7 @@
           "english": "versus",
           "phonetic": {},
           "definitions": [
-            "(ai)"
+            "prep. 对；相对；与...相比"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -1149,7 +1149,7 @@
           "english": "airport",
           "phonetic": {},
           "definitions": [
-            "英/'eapɑːt/"
+            "n. 机场；航空站"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -1161,7 +1161,7 @@
           "english": "aspire",
           "phonetic": {},
           "definitions": [
-            "美/ə'spaɪər/"
+            "v. 渴望；追求；有志于"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -1193,7 +1193,7 @@
           "english": "conspire",
           "phonetic": {},
           "definitions": [
-            "美/ kon'spaɪər/"
+            "v. 共谋；密谋；协同"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -1205,7 +1205,7 @@
           "english": "deport",
           "phonetic": {},
           "definitions": [
-            "n.驱逐"
+            "v. 驱逐出境；举止"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -1217,7 +1217,7 @@
           "english": "despair",
           "phonetic": {},
           "definitions": [
-            "adj.感到绝望的"
+            "n. 绝望；v. 绝望"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -1229,7 +1229,7 @@
           "english": "desperate",
           "phonetic": {},
           "definitions": [
-            "adv.绝望地"
+            "adj. 绝望的；不顾一切的"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -1241,7 +1241,7 @@
           "english": "expire",
           "phonetic": {},
           "definitions": [
-            "adj.过期的"
+            "v. 期满；终止；死亡"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -1575,7 +1575,7 @@
           "english": "memorial",
           "phonetic": {},
           "definitions": [
-            "n. (2006年阅读理解 Text 2)"
+            "n. 纪念碑；纪念物；adj. 纪念的"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -1646,7 +1646,7 @@
           "english": "opportunity",
           "phonetic": {},
           "definitions": [
-            "n.机会\topportunity cost 机会成本"
+            "n. 机会；时机"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -1658,7 +1658,7 @@
           "english": "perspire",
           "phonetic": {},
           "definitions": [
-            "美/ par'spaɪər/"
+            "v. 出汗；流汗；排汗"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -1670,7 +1670,7 @@
           "english": "port",
           "phonetic": {},
           "definitions": [
-            "n. 入口"
+            "n. 港口；口岸"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -1682,7 +1682,7 @@
           "english": "portable",
           "phonetic": {},
           "definitions": [
-            "adj.值得报告的"
+            "adj. 便携的；手提的；轻便的"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -1694,7 +1694,7 @@
           "english": "prosper",
           "phonetic": {},
           "definitions": [
-            "v. 繁荣"
+            "v. 繁荣；成功；兴旺"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -1781,7 +1781,7 @@
           "english": "report",
           "phonetic": {},
           "definitions": [
-            "art.(2018年英语一阅读理解 Text 3)"
+            "v. 报告；汇报；n. 报告"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -1793,7 +1793,7 @@
           "english": "respire",
           "phonetic": {},
           "definitions": [
-            "美/ rr'spaɪər/"
+            "v. 呼吸；恢复精神"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -1805,7 +1805,7 @@
           "english": "spirit",
           "phonetic": {},
           "definitions": [
-            "n.(2014 年英语一英译汉)"
+            "n. 精神；心灵；勇气"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -1817,7 +1817,7 @@
           "english": "support",
           "phonetic": {},
           "definitions": [
-            "vt. 支持"
+            "v./n. 支持；支援；维持"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -1904,7 +1904,7 @@
           "english": "volunteer",
           "phonetic": {},
           "definitions": [
-            "招募志愿者"
+            "n. 志愿者；v. 自愿"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -1922,7 +1922,7 @@
           "english": "acentric",
           "phonetic": {},
           "definitions": [
-            "形容词词性"
+            "adj. 无中心的；偏心的"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -1934,7 +1934,7 @@
           "english": "afford",
           "phonetic": {},
           "definitions": [
-            "n.(2009 年阅读理解 Text 3)"
+            "v. 负担得起；提供"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -1946,7 +1946,7 @@
           "english": "appetite",
           "phonetic": {},
           "definitions": [
-            "英/'æpɪtaɪt/"
+            "n. 食欲；胃口；欲望"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -2154,7 +2154,7 @@
           "english": "concentrate",
           "phonetic": {},
           "definitions": [
-            "v. 使……聚集"
+            "v. 集中；专注；浓缩"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -2197,7 +2197,7 @@
           "english": "consolidate",
           "phonetic": {},
           "definitions": [
-            "adj. 巩固的;合并的"
+            "v. 巩固；合并；统一"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -2209,7 +2209,7 @@
           "english": "corroborate",
           "phonetic": {},
           "definitions": [
-            "动词词性"
+            "v. 证实；确证"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -2221,7 +2221,7 @@
           "english": "decentralize",
           "phonetic": {},
           "definitions": [
-            "adj.分散的"
+            "v. 分散；下放权力"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -2268,7 +2268,7 @@
           "english": "enforce",
           "phonetic": {},
           "definitions": [
-            "vt. 迫使"
+            "v. 实施；执行；强制"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -2351,7 +2351,7 @@
           "english": "expenditure",
           "phonetic": {},
           "definitions": [
-            "名词词性"
+            "n. 支出；花费；消费"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -2363,7 +2363,7 @@
           "english": "expense",
           "phonetic": {},
           "definitions": [
-            "V. (2021 年英语一阅读理解 Text 4)"
+            "n. 费用；代价；开支"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -2623,7 +2623,7 @@
             "us": "/'pedagɑːdgi/"
           },
           "definitions": [
-            "= pet,走"
+            "n. 教育学；教学法"
           ],
           "exam_sentences": [],
           "extensions": [
@@ -2885,7 +2885,7 @@
           "english": "solar",
           "phonetic": {},
           "definitions": [
-            "形容词词性"
+            "adj. 太阳的；日光的"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -3034,7 +3034,7 @@
           "english": "solidarity",
           "phonetic": {},
           "definitions": [
-            "英/ˌsɒlrdærəti/"
+            "n. 团结；团结一致"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -3046,7 +3046,7 @@
           "english": "solitary",
           "phonetic": {},
           "definitions": [
-            "英/ 'sɒlətri/"
+            "adj. 孤独的；独居的"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -3100,7 +3100,7 @@
           "english": "artifact",
           "phonetic": {},
           "definitions": [
-            "= art,技艺"
+            "n. 人工制品；手工艺品"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -3186,7 +3186,7 @@
           "english": "asymmetry",
           "phonetic": {},
           "definitions": [
-            "英/ˌersImətrI/"
+            "n. 不对称"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -3476,7 +3476,7 @@
             "us": "/ 'defɪsɪt/"
           },
           "definitions": [
-            "= fact,制造"
+            "n. 赤字；逆差；不足"
           ],
           "exam_sentences": [],
           "extensions": [
@@ -3585,7 +3585,7 @@
             "us": "/fə'sɪləti/"
           },
           "definitions": [
-            "名词词性"
+            "n. 设施；设备；天赋"
           ],
           "exam_sentences": [],
           "extensions": [
@@ -3956,7 +3956,7 @@
           "english": "simile",
           "phonetic": {},
           "definitions": [
-            "= similar,相似"
+            "n. 明喻"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -3971,8 +3971,7 @@
             "uk": "/ 'sɪmjuleɪt/"
           },
           "definitions": [
-            "v.假装，冒充；模拟，模仿；看上去像；计算机模拟",
-            "adj.同时发生的，同步的"
+            "v. 模拟；模仿；假装"
           ],
           "exam_sentences": [
             {
@@ -4044,7 +4043,7 @@
           "english": "simultaneous",
           "phonetic": {},
           "definitions": [
-            "adv.同时地"
+            "adj. 同时的；同步的"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -4056,7 +4055,7 @@
           "english": "symmetry",
           "phonetic": {},
           "definitions": [
-            "名词词性"
+            "n. 对称；匀称"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -4216,7 +4215,7 @@
             "us": "/'sɪmfəni/"
           },
           "definitions": [
-            "(ai)"
+            "n. 交响乐；交响曲"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -4368,7 +4367,7 @@
           "english": "antipathy",
           "phonetic": {},
           "definitions": [
-            "n.反感"
+            "n. 反感；厌恶"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -4380,7 +4379,7 @@
           "english": "apathy",
           "phonetic": {},
           "definitions": [
-            "n.冷漠"
+            "n. 冷漠；漠不关心"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -4681,7 +4680,7 @@
           "english": "demography",
           "phonetic": {},
           "definitions": [
-            "名词词性"
+            "n. 人口统计学"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -4845,7 +4844,7 @@
             "uk": "/ˌeprdemɪk/"
           },
           "definitions": [
-            "形容词词性"
+            "n. 流行病；adj. 流行的"
           ],
           "exam_sentences": [
             {
@@ -4899,7 +4898,7 @@
             "us": "/' esns/"
           },
           "definitions": [
-            "本质上"
+            "n. 本质；实质；精华"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -5010,7 +5009,7 @@
           "english": "malformed",
           "phonetic": {},
           "definitions": [
-            "美/ˌmæl'fɔːrmd/"
+            "adj. 畸形的；变形的"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -5106,7 +5105,7 @@
           "english": "nonsense",
           "phonetic": {},
           "definitions": [
-            "胡闹"
+            "n. 胡说；废话"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -5118,7 +5117,7 @@
           "english": "pandemic",
           "phonetic": {},
           "definitions": [
-            "形容词词性"
+            "n. 大流行病；adj. 大流行的"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -5329,7 +5328,7 @@
           "english": "popularize",
           "phonetic": {},
           "definitions": [
-            "英/'pɒpjələraɪz/"
+            "v. 推广；普及；使流行"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -5464,7 +5463,7 @@
             "us": "/ kwm tesns/"
           },
           "definitions": [
-            "（五） (ai)"
+            "n. 精华；典型；典范"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -6055,7 +6054,7 @@
           "english": "deceive",
           "phonetic": {},
           "definitions": [
-            "（下、拿） (ai)"
+            "v. 欺骗；蒙蔽"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -6103,7 +6102,7 @@
           "english": "exhume",
           "phonetic": {},
           "definitions": [
-            "（出、土） (ai)"
+            "v. 掘出；发掘"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -6639,7 +6638,7 @@
           "english": "perceive",
           "phonetic": {},
           "definitions": [
-            "（贯穿、拿） (ai)"
+            "v. 察觉；理解；认知"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -6789,7 +6788,7 @@
           "english": "underlie",
           "phonetic": {},
           "definitions": [
-            "(ai)"
+            "v. 构成...的基础；位于...之下"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -6801,7 +6800,7 @@
           "english": "underline",
           "phonetic": {},
           "definitions": [
-            "（下、位于） (ai)"
+            "v. 在...下面划线；强调"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -6825,7 +6824,7 @@
           "english": "underrate",
           "phonetic": {},
           "definitions": [
-            "（下、评估） (ai)"
+            "v. 低估；轻视"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -6840,7 +6839,7 @@
             "uk": "/ˌʌndə'teɪk/"
           },
           "definitions": [
-            "（下、拿） (ai)"
+            "v. 承担；从事；保证"
           ],
           "exam_sentences": [],
           "extensions": [
@@ -6875,7 +6874,7 @@
             "uk": "/ˌʌndə'juːtIˌaIz/"
           },
           "definitions": [
-            "（下、利用） (ai)"
+            "v. 未充分利用"
           ],
           "exam_sentences": [],
           "extensions": [
@@ -7348,7 +7347,7 @@
           "english": "controversial",
           "phonetic": {},
           "definitions": [
-            "adj. 没有争议的"
+            "adj. 有争议的；引起争议的"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -7481,7 +7480,7 @@
           "english": "discount",
           "phonetic": {},
           "definitions": [
-            "（否定、数数） (ai)"
+            "n. 折扣；v. 打折；不重视"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -8459,7 +8458,7 @@
           "english": "catastrophe",
           "phonetic": {},
           "definitions": [
-            "n.灾难"
+            "n. 灾难；灾祸"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -8811,7 +8810,7 @@
           "english": "decadent",
           "phonetic": {},
           "definitions": [
-            "美/ dekədənt/"
+            "adj. 颓废的；衰退的"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -8942,7 +8941,7 @@
           "english": "enchant",
           "phonetic": {},
           "definitions": [
-            "= in,里面"
+            "v. 使迷醉；施魔法"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -8966,7 +8965,7 @@
           "english": "incentive",
           "phonetic": {},
           "definitions": [
-            "(ai)"
+            "n. 激励；刺激；动力"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -9284,7 +9283,7 @@
           "english": "conquest",
           "phonetic": {},
           "definitions": [
-            "（加强、追） (ai)"
+            "n. 征服；战胜；战利品"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -13028,7 +13027,7 @@
           "english": "increase",
           "phonetic": {},
           "definitions": [
-            "(ai)"
+            "v./n. 增加；增长"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -13252,7 +13251,7 @@
           "english": "recreate",
           "phonetic": {},
           "definitions": [
-            "（重新、产生） (ai)"
+            "v. 再创造；重现；娱乐"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -13623,7 +13622,7 @@
           "english": "defame",
           "phonetic": {},
           "definitions": [
-            "（下、名誉） (ai)"
+            "v. 诽谤；诋毁"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -13821,7 +13820,7 @@
             "uk": "/,laɪə bɪləti/"
           },
           "definitions": [
-            "(ai)"
+            "n. 责任；债务；不利因素"
           ],
           "exam_sentences": [
             {
@@ -14787,7 +14786,7 @@
           "english": "disprove",
           "phonetic": {},
           "definitions": [
-            "（否定、证明） (ai)"
+            "v. 反驳；证明...为假"
           ],
           "exam_sentences": [],
           "extensions": [],
@@ -19069,7 +19068,7 @@
             "uk": "/ɪn' spekt/"
           },
           "definitions": [
-            "v.检查，审视；检阅，视察"
+            "v. 检查；审视"
           ],
           "exam_sentences": [],
           "extensions": [
@@ -22936,7 +22935,7 @@
             "uk": "/prɪkluːd/"
           },
           "definitions": [
-            "vt.阻止，妨碍"
+            "v. 排除；阻止；妨碍"
           ],
           "exam_sentences": [],
           "extensions": [
@@ -23107,7 +23106,7 @@
             "uk": "/ 'eɪdʒənsi/"
           },
           "definitions": [
-            "n.代理行，经销处；政府内的部门"
+            "n. 机构；代理处"
           ],
           "exam_sentences": [
             {
@@ -23133,7 +23132,7 @@
             "uk": "/ə'dʒendə/"
           },
           "definitions": [
-            "n.待议事项，议事日程；(政治)议题；秘密计划，秘密目标"
+            "n. 议程；议事日程"
           ],
           "exam_sentences": [],
           "extensions": [
@@ -23157,7 +23156,7 @@
             "uk": "/'eɪdʒənt/"
           },
           "definitions": [
-            "n.代理人，代理商；经纪人；间谍，特工；原动力，动因"
+            "n. 代理人；代理商；特工"
           ],
           "exam_sentences": [
             {
@@ -23183,7 +23182,7 @@
             "uk": "/'ædʒaɪl/"
           },
           "definitions": [
-            "n. 易碎性"
+            "adj. 敏捷的；灵活的"
           ],
           "exam_sentences": [],
           "extensions": [
