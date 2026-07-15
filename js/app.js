@@ -17,10 +17,9 @@ import { renderQuizListPage, showQuizImportModal, loadBuiltinQuizzes } from './q
 import { renderJavaCrashPage } from './java-crash.js';
 import { renderJavaMistakesPage, getJavaMistakeCount } from './java-mistakes.js';
 import { renderSentencesPage, startStudy } from './sentences.js';
-import { renderHomePageV3, startUnitFlashcard } from './wordbook.js';
 import { renderStarredPage, startStarredTest } from './starred.js';
 
-const APP_VERSION = '2.7';
+const APP_VERSION = '3.0';
 
 // ==================== 全局暴露 ====================
 window.goToPage = goToPage;
@@ -72,7 +71,9 @@ function bindEvents() {
   // 列表选择
   const ls = document.getElementById('list-select');
   ls.addEventListener('change', e => {
-    setCurrentList(data.lists.find(l => l.id === parseInt(e.target.value)) || null);
+    const val = e.target.value;
+    setCurrentList(data.lists.find(l => String(l.id) === String(val)) || null);
+    goToPage('word-list');
   });
 
   // 新建列表
@@ -213,80 +214,42 @@ function renderHomePage() {
   loadWordbookUnits();
 }
 
-let _wordbookLists = null;
-
 async function loadWordbookUnits() {
   try {
     const r = await fetch('data/wordbook.json');
     const wb = await r.json();
-    const sel = document.getElementById('list-select');
-    if (!sel) return;
     
-    // 在列表选择器末尾添加单词书单元
+    // 把单词书单元作为列表加进 data.lists
     for (const unit of wb.units) {
-      const exists = Array.from(sel.options).some(o => o.value === `wb-${unit.id}`);
+      const exists = data.lists.some(l => l.id === `wb-${unit.id}`);
       if (!exists) {
-        const o = document.createElement('option');
-        o.value = `wb-${unit.id}`;
-        o.textContent = `📖 ${unit.title} (${unit.words.length})`;
-        sel.appendChild(o);
+        data.lists.push({
+          id: `wb-${unit.id}`,
+          name: `📖 ${unit.title}`,
+          wordCount: unit.words.length,
+          words: unit.words.map(w => ({
+            english: w.english,
+            chinese: (w.definitions || []).join('；'),
+            phonetic: (w.phonetic && (w.phonetic.us || w.phonetic.uk))
+              ? [w.phonetic.us, w.phonetic.uk].filter(Boolean).join(' ') : '',
+            example: (w.exam_sentences || []).map(s => s.sentence).join('\n'),
+            exampleCN: (w.exam_sentences || []).map(s => s.translation || '').filter(Boolean).join('\n'),
+            note: w.memory_aid || '',
+            extensions: w.extensions || [],
+            easeFactor: 2.5, interval: 0, repetitions: 0,
+            nextReview: null, lastReview: null,
+            stability: 0, difficulty: 0, fsrsState: 0, fsrsReps: 0, fsrsLastReview: null,
+            passed: false, starred: false
+          })),
+          ecMistakes: [],
+          ceMistakes: []
+        });
       }
     }
-    _wordbookLists = wb.units;
-    
-    // 监听选择变化
-    sel.addEventListener('change', function() {
-      const val = this.value;
-      if (val.startsWith('wb-')) {
-        const uid = parseInt(val.replace('wb-', ''));
-        selectWordbookUnit(uid);
-      }
-    });
+    refreshListSelect();
   } catch (e) {
     // 单词书文件不存在就不加载
   }
-}
-
-function selectWordbookUnit(unitId) {
-  const unit = _wordbookLists.find(u => u.id === unitId);
-  if (!unit) return;
-  
-  // 把单元转成临时列表
-  const tempList = {
-    id: `wb-${unit.id}`,
-    name: unit.title,
-    words: unit.words.map(w => ({
-      english: w.english,
-      chinese: (w.definitions || []).join('；'),
-      phonetic: (w.phonetic && (w.phonetic.us || w.phonetic.uk))
-        ? [w.phonetic.us, w.phonetic.uk].filter(Boolean).join(' ') : '',
-      example: (w.exam_sentences || []).map(s => s.sentence).join('\n'),
-      exampleCN: (w.exam_sentences || []).map(s => s.translation || '').filter(Boolean).join('\n'),
-      note: w.memory_aid || '',
-      extensions: w.extensions || [],
-      easeFactor: 2.5, interval: 0, repetitions: 0,
-      nextReview: null, lastReview: null,
-      stability: 0, difficulty: 0, fsrsState: 0, fsrsReps: 0, fsrsLastReview: null,
-      passed: false, starred: false
-    })),
-    ecMistakes: [],
-    ceMistakes: []
-  };
-  
-  // 临时替换当前列表
-  const orig = window.__origList;
-  if (orig) {
-    data.lists = data.lists.filter(l => l.id !== 'wb-temp');
-  }
-  window.__origList = currentList;
-  data.lists.push(tempList);
-  setCurrentList(tempList);
-  refreshListSelect();
-  document.getElementById('list-select').value = `wb-${unitId}`;
-  showToast(`已切换到 ${unit.title}`);
-  
-  // 选择词表页
-  goToPage('word-list');
 }
 
 function refreshListSelect() {
