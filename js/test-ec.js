@@ -16,8 +16,13 @@ function safePlay(text) {
 let state = {
   words: [], mistakes: [], currentIndex: 0,
   phase: 'learning', reviewQueue: [],
-  correctAnswer: '', options: [], buttonsEnabled: true, startTime: 0
+  correctAnswer: '', startTime: 0,
+  _timer: null
 };
+
+function clearTimer() {
+  if (state._timer) { clearTimeout(state._timer); state._timer = null; }
+}
 
 export function startECTest() {
   if (!currentList) { showToast('请先选择一个列表'); return; }
@@ -160,7 +165,7 @@ function checkECAnswer(index, btnEl) {
     }
     currentList.ecMistakes = state.mistakes;
     saveData();
-    setTimeout(showECQuestion, 1500);
+    clearTimer(); state._timer = setTimeout(showECQuestion, 1500);
   } else {
     fb.textContent = `❌ 错误！正确答案: ${state.correctAnswer}`;
     fb.className = 'feedback-text feedback-wrong';
@@ -184,7 +189,7 @@ function checkECAnswer(index, btnEl) {
     currentList.ecMistakes = state.mistakes;
     saveData();
 
-    setTimeout(() => {
+    clearTimer(); state._timer = setTimeout(() => {
       showFlashcardCard(word || { english: state.correctAnswer, chinese: state.correctAnswer });
     }, 2500);
   }

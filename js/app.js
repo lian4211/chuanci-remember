@@ -18,6 +18,7 @@ import { renderJavaCrashPage } from './java-crash.js';
 import { renderJavaMistakesPage, getJavaMistakeCount } from './java-mistakes.js';
 import { renderSentencesPage, startStudy } from './sentences.js';
 import { renderStarredPage, startStarredTest } from './starred.js';
+import { startWordbookFlashcard } from './flashcard-wb.js';
 
 const APP_VERSION = '3.0';
 
@@ -179,6 +180,12 @@ function bindEvents() {
   document.getElementById('global-search-btn')?.addEventListener('click', globalSearchStart);
   document.getElementById('gs-cancel-btn')?.addEventListener('click', () => { window._gsCancel = true; });
 
+  // 串词闪卡启动
+  window._startWBFlashcard = function() {
+    if (!currentList || !currentList.words.length) { showToast('没有单词'); return; }
+    startWordbookFlashcard(currentList.words, 0);
+  };
+
   // 数据变更
   window.addEventListener('data-changed', () => { refreshListSelect(); renderHomePage(); });
 
@@ -276,7 +283,14 @@ function renderWordListPage(filter = '') {
   let words = currentList.words;
   if (filter) { const q = filter.toLowerCase(); words = words.filter(w => w.english.toLowerCase().includes(q) || w.chinese.includes(q)); }
   cnt.textContent = filter ? `搜索"${filter}"：${words.length} 个` : `共 ${currentList.words.length} 个单词`;
-  c.innerHTML = words.map(w => {
+  // Add flashcard button at top
+  if (!filter && currentList.name && currentList.name.startsWith('📖')) {
+    c.innerHTML = '<div style="display:flex;gap:0.4rem;margin-bottom:0.5rem">' +
+      '<button class="btn-primary" style="flex:1" onclick="window._startWBFlashcard()">🧠 串词闪卡</button>' +
+      '<button class="btn-ghost" style="flex:1" onclick="startECTest()">📜 英译汉</button>' +
+      '<button class="btn-ghost" style="flex:1" onclick="startCETest()">✍️ 汉译英</button></div>';
+  }
+  c.innerHTML += words.map(w => {
     const idx = currentList.words.indexOf(w);
     return `<div class="app-card" style="padding:0.75rem">
       <div style="display:flex;justify-content:space-between;align-items:center">

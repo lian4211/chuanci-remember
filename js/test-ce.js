@@ -14,8 +14,13 @@ function safePlay(text) { try { playVoice(text); } catch(e) { console.log('TTS:'
 let state = {
   words: [], mistakes: [], currentIndex: 0,
   phase: 'learning', reviewQueue: [],
-  correctAnswer: '', requireCorrectInput: false, requiredInput: '', startTime: 0
+  correctAnswer: '', requireCorrectInput: false, requiredInput: '', startTime: 0,
+  _timer: null
 };
+
+function clearTimer() {
+  if (state._timer) { clearTimeout(state._timer); state._timer = null; }
+}
 
 export function startCETest() {
   if (!currentList) { showToast('请先选择一个列表'); return; }
@@ -88,7 +93,7 @@ function checkCEAnswer() {
     if (input === state.requiredInput.toLowerCase()) {
       document.getElementById('ce-feedback').textContent = '正确，请继续';
       document.getElementById('ce-feedback').className = 'feedback-text feedback-correct';
-      setTimeout(nextCEQuestion, 800);
+      clearTimer(); state._timer = setTimeout(nextCEQuestion, 800);
     } else {
       document.getElementById('ce-feedback').textContent = `请输入正确答案: ${state.requiredInput}`;
       document.getElementById('ce-feedback').className = 'feedback-text feedback-wrong';
@@ -140,7 +145,7 @@ function checkCEAnswer() {
     }
     currentList.ceMistakes = state.mistakes;
     saveData();
-    setTimeout(nextCEQuestion, 1500);
+    clearTimer(); state._timer = setTimeout(nextCEQuestion, 1500);
   } else {
     fb.textContent = `❌ 错误！正确答案: ${state.correctAnswer}`;
     fb.className = 'feedback-text feedback-wrong';
@@ -168,7 +173,7 @@ function checkCEAnswer() {
     currentList.ceMistakes = state.mistakes;
     saveData();
 
-    setTimeout(() => {
+    clearTimer(); state._timer = setTimeout(() => {
       showFlashcardCard(word || { english: state.correctAnswer, chinese: '' });
     }, 2500);
   }
