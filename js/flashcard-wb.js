@@ -71,6 +71,7 @@ function renderCard() {
         <div class="fc-en">${esc(word.english)}</div>
         ${ph ? `<div class="fc-ph">${esc(ph)}</div>` : ''}
         <div class="fc-def">${esc(defs)}</div>
+        <button class="fc-voice-btn" onclick="window._fcPlayVoice()">🔊 朗读</button>
       </div>
 
       ${hasSents ? `
@@ -100,6 +101,9 @@ function renderCard() {
     sm2Update(word, grade);
     _fcState.index++;
     renderCard();
+  };
+  window._fcPlayVoice = function() {
+    if (window.playVoice) window.playVoice(word.english);
   };
 }
 
