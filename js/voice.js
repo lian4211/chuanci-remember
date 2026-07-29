@@ -79,10 +79,28 @@ export function getCurrentVoiceName() {
 
 /** 初始化语音设置滑块 */
 export function initVoiceSettings() {
-  // 预加载语音
+  // 预加载语音并填充选择器
   waitForVoices().then(voices => {
     selectedVoice = findBestVoice(voices);
     voicesLoaded = true;
+    
+    // 填充语音选择器
+    const sel = document.getElementById('voice-select');
+    if (!sel) return;
+    const enVoices = voices.filter(v => v.lang && v.lang.startsWith('en'));
+    const saved = data.voiceSettings?.voiceName;
+    sel.innerHTML = '<option value="">自动选择(推荐)</option>' +
+      enVoices.map(v =>
+        `<option value="${v.name}" ${v.name === saved || v.name === selectedVoice?.name ? 'selected' : ''}>${v.name} (${v.lang})</option>`
+      ).join('');
+    sel.addEventListener('change', () => {
+      const name = sel.value;
+      data.voiceSettings = data.voiceSettings || { rate: '+0%', volume: '+0%', pitch: '+0Hz' };
+      data.voiceSettings.voiceName = name;
+      saveData();
+      selectedVoice = name ? voices.find(v => v.name === name) : findBestVoice(voices);
+      showToast('语音已切换');
+    });
   });
 
   const rateSlider = document.getElementById('rate-slider');
