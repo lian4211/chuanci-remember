@@ -225,6 +225,7 @@ async function loadWordbookUnits() {
   try {
     const r = await fetch('data/wordbook.json');
     const wb = await r.json();
+    window._wbWordbook = wb;  // 供闪卡模块使用
     
     // 把单词书单元作为列表加进 data.lists
     for (const unit of wb.units) {
