@@ -23,12 +23,14 @@ function waitForVoices() {
 
 /** 选择最佳英文语音：优先微软 Neural 语音 */
 function findBestVoice(voices) {
-  // 优先级：微软 Neural (Zira/Jenny/Aria) > 微软其他英文 > Google UK > 首个 en-US
+  // 优先级：微软 Neural > Google US/UK > Apple > 其他 en-US
   const priorityPatterns = [
     /Microsoft.*(?:Zira|Jenny|Aria|Nancy|Sara)/i,
-    /Microsoft.*English/i,
     /Google UK/i,
     /Google US/i,
+    /Google.*English/i,
+    /Samantha|Karen|Daniel|Moira|Tessa/i,          // Apple 高质量
+    /Microsoft.*English/i,
   ];
   const enVoices = voices.filter(v => v.lang && v.lang.startsWith('en'));
   for (const pattern of priorityPatterns) {
