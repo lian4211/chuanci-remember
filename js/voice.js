@@ -1,57 +1,76 @@
-// ==================== 语音播放模块 (v3) ====================
-// 策略: Google TTS(Android首选) → Apple(iOS) → Microsoft(Windows) → 默认
+// ==================== 语音播放模块 (v4) ====================
+// 优先使用预录 MP3 (Edge TTS 生成, 最高质量)
+// 回退 Web Speech API
 
 import { data, saveData } from './data.js';
 import { showToast } from './ui.js';
 
+let _audioMap = null;
+
+// 加载音频映射表
+async function loadAudioMap() {
+  if (_audioMap) return _audioMap;
+  try {
+    const r = await fetch('data/audio_map.json');
+    _audioMap = await r.json();
+  } catch(e) { _audioMap = {}; }
+  return _audioMap;
+}
+
 function parseV(v) { return parseInt(String(v).replace(/[+%Hz]/g,'')) || 0; }
 
 export async function playVoice(text) {
+  const word = text.toLowerCase().trim();
+
+  // 1. 尝试预录 MP3 (Edge TTS 生成, 最高品质)
+  const map = await loadAudioMap();
+  const key = word.replace(/'/g, '_').replace(/-/g, '_');
+  if (map[key] || map[word]) {
+    const filename = map[key] || map[word];
+    try {
+      const audio = new Audio('data/audio/' + filename);
+      const rate = parseV(data.voiceSettings.rate);
+      audio.playbackRate = Math.max(0.5, Math.min(2, 1 + (rate / 100)));
+      await audio.play();
+      return;
+    } catch(e) {
+      // 播放失败, 继续尝试 Web Speech
+    }
+  }
+
+  // 2. 回退 Web Speech API
   try {
     const voices = window.speechSynthesis.getVoices();
     let voice = null;
-
-    // 1. 用户手动选的语音
     const saved = data.voiceSettings?.voiceName;
     if (saved) voice = voices.find(v => v.name === saved);
-
-    // 2. 自动选最佳
     if (!voice && voices.length > 0) {
-      // 移动端优先 Google (Android) / Samantha (iOS)
-      const prefs = [
-        /Google US English/i, /Google UK English/i, /Google.*English/i,
-        /Samantha/i, /Karen/i, /Moira/i, /Tessa/i,
-        /Microsoft.*(?:Jenny|Aria|Zira)/i,
-        /Microsoft.*English/i
-      ];
-      for (const p of prefs) {
-        voice = voices.find(v => p.test(v.name));
-        if (voice) break;
-      }
+      const prefs = [/Google US English/i, /Google UK English/i, /Google.*English/i,
+        /Samantha/i, /Karen/i, /Microsoft.*(?:Jenny|Aria|Zira)/i, /Microsoft.*English/i];
+      for (const p of prefs) { voice = voices.find(v => p.test(v.name)); if (voice) break; }
       if (!voice) voice = voices.find(v => v.lang === 'en-US') || voices[0];
     }
-
     window.speechSynthesis.cancel();
     const u = new SpeechSynthesisUtterance(text);
-    const rate = parseV(data.voiceSettings.rate);
-    u.rate = Math.max(0.5, Math.min(2, 1 + (rate / 100)));
+    u.rate = Math.max(0.5, Math.min(2, 1 + (parseV(data.voiceSettings.rate) / 100)));
     u.lang = 'en-US';
     if (voice) u.voice = voice;
     window.speechSynthesis.speak(u);
   } catch(e) { console.error('语音失败:', e); }
 }
 
-export function getCurrentVoiceName() { return data.voiceSettings?.voiceName || '自动'; }
+export function getCurrentVoiceName() {
+  return data.voiceSettings?.voiceName || 'Edge TTS 预录';
+}
 
 export function initVoiceSettings() {
-  // 填充语音选择器
   setTimeout(() => {
     const sel = document.getElementById('voice-select');
     if (!sel) return;
     const voices = window.speechSynthesis.getVoices();
     const enVoices = voices.filter(v => v.lang && v.lang.startsWith('en'));
     const saved = data.voiceSettings?.voiceName;
-    sel.innerHTML = '<option value="">自动选择最佳</option>' +
+    sel.innerHTML = '<option value="">Edge TTS 预录(推荐)</option>' +
       enVoices.map(v =>
         `<option value="${v.name}" ${v.name === saved ? 'selected' : ''}>${v.name}</option>`
       ).join('');
@@ -77,12 +96,8 @@ export function initVoiceSettings() {
     showToast('语音设置已保存');
   });
 
-  // 测试语音按钮
-  document.getElementById('test-voice-btn')?.addEventListener('click', () => { playVoice('Hello, this is a test of the voice system.'); });
+  document.getElementById('test-voice-btn')?.addEventListener('click', () => { playVoice('Elaborate'); });
 
   const ne = document.getElementById('voice-name-display');
-  if (ne) {
-    const up = () => { ne.textContent = '当前语音: ' + getCurrentVoiceName(); };
-    up(); setTimeout(up, 600);
-  }
+  if (ne) { ne.textContent = '语音: ' + getCurrentVoiceName(); }
 }
