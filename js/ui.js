@@ -21,7 +21,8 @@ const PAGE_TITLES = {
   'java-mistakes': 'Java错题库',
   'sentences': '长难句',
   'sentence-study': '长难句学习',
-  'starred': '⭐ 收藏夹'
+  'starred': '⭐ 收藏夹',
+  'flashcard': '闪卡记忆'
 };
 
 /** 切换到指定页面 */

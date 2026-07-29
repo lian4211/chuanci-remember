@@ -63,6 +63,7 @@
                 <div class="feature-card" onclick="goToPage('java-crash')"><span class="icon">☕</span><span class="label">Java速成</span></div>
                 <div class="feature-card" onclick="goToPage('sentences')"><span class="icon">📖</span><span class="label">长难句</span></div>
                 <div class="feature-card" onclick="goToPage('settings')"><span class="icon">⚙️</span><span class="label">设置</span></div>
+                <div class="feature-card" onclick="window._startWBFlashcard()"><span class="icon">🧠</span><span class="label">串词闪卡</span></div>
             </div>
 
             <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:0.5rem;margin-bottom:0.5rem">
@@ -157,6 +158,11 @@
                 <p id="review-feedback"></p>
             </div>
             <div id="review-flashcard-area" class="hidden"></div>
+        </div>
+
+        <!-- ====== 串词闪卡 (v3) ====== -->
+        <div id="flashcard-page" class="page">
+            <div id="flashcard-content"></div>
         </div>
 
         <!-- ====== 错题库 ====== -->
